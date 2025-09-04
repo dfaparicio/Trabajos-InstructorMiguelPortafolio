@@ -2,25 +2,19 @@ class CuentaBancaria {
   String _titular;
   double _saldo;
   int _numeroCuenta;
-  static int _contadorCuentas = 1000; 
-  static double _tasaInteres = 0.05; 
+  static int _contadorCuentas = 1000;
+  static double _tasaInteres = 0.05;
 
+  CuentaBancaria(this._titular, this._saldo)
+      : _numeroCuenta = _contadorCuentas++;
 
-  CuentaBancaria(this._titular, this._saldo) {
-    _numeroCuenta = _contadorCuentas++;
-  }
+  CuentaBancaria.conSaldoInicial(this._titular)
+      : _saldo = 100.0,
+        _numeroCuenta = _contadorCuentas++;
 
-  
-  CuentaBancaria.conSaldoInicial(this._titular) {
-    _saldo = 100.0; // saldo por defecto
-    _numeroCuenta = _contadorCuentas++;
-  }
-
- 
   void mostrarInfo() {
     print("Titular: $_titular | Nº Cuenta: $_numeroCuenta | Saldo: \$$_saldo");
   }
-
 
   void depositar(double monto) {
     if (monto > 0) {
@@ -30,7 +24,6 @@ class CuentaBancaria {
       print("El monto a depositar debe ser mayor a 0.");
     }
   }
-
 
   void retirar(double monto) {
     if (monto <= _saldo && monto > 0) {
@@ -43,12 +36,12 @@ class CuentaBancaria {
     }
   }
 
-
   void calcularInteres() {
     double interes = _saldo * _tasaInteres;
     print("Interés ganado en 1 año: \$${interes.toStringAsFixed(2)} a una tasa del ${(_tasaInteres * 100).toStringAsFixed(1)}%");
   }
 }
+
 
 
 
