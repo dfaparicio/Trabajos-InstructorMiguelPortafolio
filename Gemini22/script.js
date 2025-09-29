@@ -1,7 +1,7 @@
 // ================== CONFIGURACIÓN ==================
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-const API_KEY = "AIzaSyBqCLCKALnCX5IzjBP87dy5E_YvPDuclnQ";
+const API_KEY = "AIzaSyBBAEYltiVyWscwACtzAbqZCysBH1lSxs0";
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
@@ -120,4 +120,5 @@ clearButton.addEventListener("click", () => {
 });
 
 userInput.focus();
+
 
