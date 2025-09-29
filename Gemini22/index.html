@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Mecánicos - Carros vs Motos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🚗 vs 🏍️ Debate de Mecánicos</h1>
+            <div class="controls">
+                <select id="select-side">
+                    <option value="carros">🚗 Mecanico de Carros</option>
+                    <option value="motos">🏍️ Mecanico de Motos</option>
+                </select>
+                <button id="auto-debate" class="btn-debate">
+                    ⚡ Debate Automático
+                </button>
+                <button id="clear-chat" class="btn-clear">
+                    🗑️ Limpiar Chat
+                </button>
+            </div>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai-message">
+                🎯 ¡Bienvenido al debate mecánico! Elige tu equipo y presiona "Debate Automático" 
+                para ver la discusión o escribe tus propios argumentos.
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <form id="chat-form">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="💬 Escribe tu argumento aquí..." 
+                    autocomplete="off"
+                >
+                <button type="submit">🚀 Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
